@@ -12,12 +12,11 @@ form.addEventListener("submit", function (event) {
   };
 
   fetch("http://localhost:8080/test/send", {
-    // Altere para o URL correto do seu servidor
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(formData), // Converte o objeto para JSON
+    body: JSON.stringify(formData),
   })
     .then((response) => response.json())
     .then((data) => {
